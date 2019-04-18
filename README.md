@@ -3,6 +3,15 @@ A library for interacting with the Inventory Hive API built using PHP
 
 Please consult the [API documentation](https://www.inventoryhive.co.uk/api/documentation) for endpoint parameters.
 
+
+#Installation
+
+##composer
+Execute the following command to get the latest version of the package:
+```
+composer require kaweb/honeycomb
+```
+
 # Examples
 
 Create a connection to the Inventory Hive API with your login details:

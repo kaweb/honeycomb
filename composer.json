@@ -11,7 +11,13 @@
             "email": "alex@kaweb.co.uk"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "Kaweb\\Honeycomb\\": "src/"
+        }
+    },
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.0.0",
+        "guzzlehttp/guzzle": "~6.0"
     }
 }

@@ -24,29 +24,35 @@ $honeycomb = new Honeycomb([
 	'password' => '',
 	'client_id' => '',
 	'client_secret' => '',
-	'version' => '1',
 ]);
 ```
 
+Each object supports `create`,  `retrieve`,  `update` and `delete` RESTful actions
+
 Access all user data
 ```php
-$honeycomb->users()->getAll();
+$honeycomb->users()->retrieve();
 ```
 
 Access a specific user's data
 ```php
-$honeycomb->users()->get(123);
+$honeycomb->users()->retrieve(123);
 ```
 
 Update a specific user's data
 ```php
-$honeycomb->users()->patch(123);
+$honeycomb->users()->update(123 [
+	'first_name' => 'Busy',
+	'last_name' => 'Bee'
+]);
 ```
 
 Delete a specific user
 ```php
 $honeycomb->users()->delete(123);
 ```
+
+Some objects have custom actions as defined in the [API Documentation](https://www.inventoryhive.co.uk/api/documentation)
 
 Register a new company
 

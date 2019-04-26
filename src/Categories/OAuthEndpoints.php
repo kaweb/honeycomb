@@ -2,12 +2,12 @@
 namespace Kaweb\Honeycomb\Categories;
 
 
-class UsersEndpoints extends BaseEndpoints
+class OAuthEndpoints extends BaseEndpoints
 {
     public function __construct($connection)
     {
 		parent::__construct($connection);
 
-    	$this->object = 'users';
+    	$this->object = 'oauth';
     }
 }

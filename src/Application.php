@@ -6,6 +6,10 @@ require  __DIR__ .'/../vendor/autoload.php';
 
 use Kaweb\Honeycomb\Helpers\RequestHelper;
 use Kaweb\Honeycomb\Categories\CompaniesEndpoints;
+use Kaweb\Honeycomb\Categories\BranchesEndpoints;
+use Kaweb\Honeycomb\Categories\UsersEndpoints;
+use Kaweb\Honeycomb\Categories\ApiUsersEndpoints;
+use Kaweb\Honeycomb\Categories\OAuthEndpoints;
 use Kaweb\Honeycomb\Remote\Connection;
 
 use GuzzleHttp\Client as GuzzleClient;
@@ -39,5 +43,25 @@ class Application
     public function Companies()
     {
         return new CompaniesEndpoints($this->connection);
+    }
+
+    public function Branches()
+    {
+        return new BranchesEndpoints($this->connection);
+    }
+
+    public function Users()
+    {
+        return new UsersEndpoints($this->connection);
+    }
+
+    public function ApiUsers()
+    {
+        return new ApiUsersEndpoints($this->connection);
+    }
+
+    public function OAuth()
+    {
+        return new OAuthEndpoints($this->connection);
     }
 }

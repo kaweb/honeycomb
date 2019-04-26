@@ -2,15 +2,14 @@
 namespace Kaweb\Honeycomb\Categories;
 
 
-class CompaniesEndpoints extends BaseEndpoints
+class ApiUsersEndpoints extends BaseEndpoints
 {
     public function __construct($connection)
     {
 		parent::__construct($connection);
 
-    	$this->object = 'companies';
+    	$this->object = 'api_users';
     }
-
 
     /**
      * POST data to an API endpoint.
@@ -22,17 +21,5 @@ class CompaniesEndpoints extends BaseEndpoints
     {
     	$this->endpoint = '/register';
     	return $this->post($content);
-    }
-
-    /**
-     * PUT data to an API endpoint.
-     *
-     * @param array $content
-     * @return array
-     */
-    public function addons(int $id, array $content = [])
-    {
-    	$this->endpoint = '/addons';
-    	return $this->put($id, $content);
     }
 }

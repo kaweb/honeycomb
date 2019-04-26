@@ -9,6 +9,9 @@ class BaseEndpoints
 {
     use RequestHelper;
 
+    protected $endpoint;
+    protected $object;
+
     public function __construct($connection)
     {
         $this->connection = $connection;
@@ -22,11 +25,34 @@ class BaseEndpoints
      * @param array $content
      * @return array
      */
-    public function getAll(array $params = [])
+    public function create(array $params = [])
     {
-        return $this->get(null, $params);
+        return $this->post($params);
     }
 
+    /**
+     * Get the JSON data from an endpoint.
+     *
+     * @param string $endpoint
+     * @param array $content
+     * @return array
+     */
+    public function retrieve(int $id = null, array $params = [])
+    {
+        return $this->get($params);
+    }
+
+    /**
+     * Get the JSON data from an endpoint.
+     *
+     * @param string $endpoint
+     * @param array $content
+     * @return array
+     */
+    public function update(int $id = null, array $content = [])
+    {
+        return $this->patch($content);
+    }
 
     /**
      * Get the JSON data from an endpoint.

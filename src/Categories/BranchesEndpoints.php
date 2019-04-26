@@ -8,6 +8,6 @@ class CompaniesEndpoints extends BaseEndpoints
     {
 		parent::__construct($connection);
 
-    	$this->endpoint = 'branches';
+    	$this->object = 'branches';
     }
 }

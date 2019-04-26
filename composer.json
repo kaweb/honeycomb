@@ -5,6 +5,7 @@
     "keywords": ["API", "InventoryHive"],
     "homepage": "https://inventoryhive.co.uk",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Alex Wilkinson",
@@ -13,7 +14,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Kaweb\\Honeycomb\\": "src/"
+            "Kaweb\\Honeycomb": "src/"
         }
     },
     "require": {

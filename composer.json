@@ -5,6 +5,7 @@
     "keywords": ["API", "InventoryHive"],
     "homepage": "https://inventoryhive.co.uk",
     "license": "MIT",
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Alex Wilkinson",

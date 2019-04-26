@@ -2,8 +2,6 @@
 
 namespace Kaweb\Honeycomb;
 
-require  __DIR__ .'/../vendor/autoload.php';
-
 use Kaweb\Honeycomb\Helpers\RequestHelper;
 use Kaweb\Honeycomb\Categories\CompaniesEndpoints;
 use Kaweb\Honeycomb\Categories\BranchesEndpoints;

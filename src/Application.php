@@ -21,7 +21,7 @@ class Application
      * @var array
      */
     protected $config = [
-        'base_uri' => 'https://www.inventoryhive.co.uk/api',
+        'base_uri' => 'https://www.propertyreporting.co.uk/api',
         'version' => '1',
     ];
 

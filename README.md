@@ -1,7 +1,7 @@
 # Honeycomb
-A library for interacting with the Inventory Hive API built using PHP
+A library for interacting with the Property Reporting API built using PHP
 
-Please consult the [API documentation](https://www.inventoryhive.co.uk/api/documentation) for endpoint parameters.
+Please consult the [API documentation](https://www.propertyreporting.co.uk/api/documentation) for endpoint parameters.
 
 
 # Installation
@@ -52,13 +52,13 @@ Delete a specific user
 $honeycomb->users()->delete(123);
 ```
 
-Some objects have custom actions as defined in the [API Documentation](https://www.inventoryhive.co.uk/api/documentation)
+Some objects have custom actions as defined in the [API Documentation](https://www.propertyreporting.co.uk/api/documentation)
 
 Register a new company
 
 ```php
 $honeycomb->companies()->register([
-	"email" =>            "example@inventoryhive.co.uk",
+	"email" =>            "example@propertyreporting.co.uk",
     "first_name" =>       "Buzzy",
     "last_name" =>        "Bee",
     "phone" =>            "123456789",

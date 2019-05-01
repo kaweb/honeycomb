@@ -85,8 +85,18 @@ class Connection
             'form_params' => $params,
         ]);
 
+
         $this->token = $this->getJsonResponse($response);
+
+        $this->token->expiry = strtotime('+'.$this->token->expires_in.' seconds');
+
         $this->headers['Authorization'] = "Bearer {$this->token->access_token}";
+
+        $this->client = new GuzzleClient([
+            'base_uri' => $this->config['base_uri']. 'v' .$this->config['version'] .'/',
+            'headers' => $this->headers,
+        ]);
+
     }
 
     /**
@@ -96,7 +106,7 @@ class Connection
      */
     public function checkToken()
     {
-        if($this->token->expires_in < time()) {
+        if($this->token->expiry < time()) {
             $this->login(true);
         }
     }

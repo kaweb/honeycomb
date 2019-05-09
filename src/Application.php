@@ -32,7 +32,7 @@ class Application
      */
     public function __construct(array $config)
     {
-        $this->config = array_merge($this->config, $config);
+        $this->config = array_merge($this->config, array_filter($config));
 
         $this->connection = new Connection($this->config);
     }

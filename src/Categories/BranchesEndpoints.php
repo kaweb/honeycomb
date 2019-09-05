@@ -2,7 +2,7 @@
 namespace Kaweb\Honeycomb\Categories;
 
 
-class CompaniesEndpoints extends BaseEndpoints
+class BranchesEndpoints extends BaseEndpoints
 {
     public function __construct($connection)
     {

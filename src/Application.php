@@ -48,14 +48,9 @@ class Application
         return new BranchesEndpoints($this->connection);
     }
 
-    public function Users()
+    public function Users($user_id = false)
     {
-        return new UsersEndpoints($this->connection);
-    }
-
-    public function ApiUsers()
-    {
-        return new ApiUsersEndpoints($this->connection);
+        return new UsersEndpoints($this->connection, $user_id);
     }
 
     public function OAuth()

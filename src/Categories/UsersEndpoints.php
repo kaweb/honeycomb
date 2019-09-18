@@ -4,7 +4,7 @@ namespace Kaweb\Honeycomb\Categories;
 
 class UsersEndpoints extends BaseEndpoints
 {
-	private $user_id = false;
+	private $user_id;
 
     public function __construct($connection, $user_id = false)
     {
@@ -25,8 +25,9 @@ class UsersEndpoints extends BaseEndpoints
 			// Error: you must specify a user_id
 			return false;
 		}
-		$this->endpoint = '/users/'. $this->user_id .'/api_keys';
-		return $this->get();
+		$this->endpoint = '/api_keys';
+
+		return $this->get($this->user_id);
 	}
 
 	/**
@@ -39,7 +40,7 @@ class UsersEndpoints extends BaseEndpoints
 			// Error: you must specify a user_id
 			return false;
 		}
-		$this->endpoint = '/users/'. $this->user_id .'/api_keys';
+		$this->endpoint = '/' . $this->user_id . '/api_keys';
 		return $this->post($content);
 	}
 }

@@ -58,7 +58,7 @@ class UsersEndpoints extends BaseEndpoints
 			// Error: you must specify a user_id
 			return false;
 		}
-		$this->endpoint = '/api_keys/' . $client_id;
+		$this->endpoint = '/api_keys/' . $client_id . '/revoke';
 
 		return $this->get($this->user_id);
 	}

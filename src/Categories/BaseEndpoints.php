@@ -64,14 +64,14 @@ class BaseEndpoints
     public function get(int $id = null, array $params = [])
     {
 
-        $responce = $this->connection->client->request('GET', $this->object.'/'.$id.$this->endpoint, [
+        $response = $this->connection->client->request('GET', $this->object.'/'.$id.$this->endpoint, [
             'headers' => $this->connection->headers,
             'query' => $params,
             'http_errors' => false,
 
         ]);
 
-        return $this->getJsonResponse($responce);
+        return $this->getJsonResponse($response);
     }
 
     /**
@@ -82,12 +82,12 @@ class BaseEndpoints
      */
     public function post(array $content = [])
     {
-        $responce =  $this->connection->client->request('POST', $this->object.$this->endpoint, [
+        $response =  $this->connection->client->request('POST', $this->object.$this->endpoint, [
             'headers' => $this->connection->headers,
             'form_params' => $content,
             'http_errors' => false,
         ]);
-        return $this->getJsonResponse($responce);
+        return $this->getJsonResponse($response);
 
     }
 
@@ -99,13 +99,13 @@ class BaseEndpoints
      */
     public function patch(int $id, array $content = [])
     {
-        $responce =  $this->connection->client->request('PATCH', $this->object.'/'.$id.$this->endpoint, [
+        $response =  $this->connection->client->request('PATCH', $this->object.'/'.$id.$this->endpoint, [
             'headers' => $headers,
             'form_params' => $content,
             'http_errors' => false,
 
         ]);
-        return $this->getJsonResponse($responce);
+        return $this->getJsonResponse($response);
 
     }
 
@@ -118,13 +118,13 @@ class BaseEndpoints
      */
     public function put(int $id, array $content = [])
     {
-        $responce =  $this->connection->client->request('PUT', $this->object.'/'.$id.$this->endpoint, [
+        $response =  $this->connection->client->request('PUT', $this->object.'/'.$id.$this->endpoint, [
             'headers' => $this->connection->headers,
             'form_params' => $content,
             'http_errors' => false,
 
         ]);
-        return $this->getJsonResponse($responce);
+        return $this->getJsonResponse($response);
 
     }
 
@@ -137,13 +137,13 @@ class BaseEndpoints
      */
     public function delete(int $id = null)
     {
-        $responce =  $this->connection->client->request('DELETE', $this->object.'/'.$id.$this->endpoint, [
+        $response =  $this->connection->client->request('DELETE', $this->object.'/'.$id.$this->endpoint, [
             'headers' => $this->connection->headers,
             'form_params' => $content,
             'http_errors' => false,
 
         ]);
-        return $this->getJsonResponse($responce);
+        return $this->getJsonResponse($response);
 
     }
 }
